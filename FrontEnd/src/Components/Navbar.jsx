@@ -22,6 +22,11 @@ const Navbar = () => {
     } else {
       setIsOpen(!isOpen);
     }
+    if (isOpen3) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(!isOpen);
+    }
     setIsOpen2(false);
     setIsOpen3(false);
   };
@@ -66,7 +71,7 @@ const Navbar = () => {
         {/* Burger Icon */}
         <div className="lg:hidden w-1/3 tablet:w-1/3">
           <img
-            src={isOpen || isOpen2 ? x : burger}
+            src={isOpen || isOpen2 || isOpen3 ? x : burger}
             alt="burger"
             className="h-7 lg:hidden"
             onClick={toggleNavbar}
